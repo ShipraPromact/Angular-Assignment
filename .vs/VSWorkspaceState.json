@@ -1,0 +1,17 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\components",
+    "\\src\\app\\components\\navbar",
+    "\\src\\app\\components\\sidebar",
+    "\\src\\app\\layouts",
+    "\\src\\app\\layouts\\admin-layout",
+    "\\src\\app\\shared",
+    "\\src\\app\\user-profile",
+    "\\src\\environments"
+  ],
+  "SelectedNode": "\\src\\app\\components\\sidebar\\sidebar.component.ts",
+  "PreviewInSolutionExplorer": false
+}
