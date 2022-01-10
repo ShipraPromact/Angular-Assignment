@@ -7,64 +7,46 @@
                         <h4 class="card-title">Add User</h4>
                     </div>
                     <div class="card-body">
-                        <form (ngSubmit)="onSubmit(formGroup.value)" [formGroup]="formGroup">
-                            <div class="row">
-                           
-                                <div class="col-md-6">
-                                    <mat-form-field class="example-full-width">
-                                        <input matInput placeholder="Username" formControlName="name">
-                                    </mat-form-field>
-                                </div>
-                                <div class="col-md-6">
-                                    <mat-form-field class="example-full-width">
-                                        <input matInput placeholder="Email address" type="email" formControlName="email">
-                                    </mat-form-field>
-                                </div>
-                            </div>
+                        <form (ngSubmit)="onSubmit(formGroup)" [formGroup]="formGroup">
                             <div class="row">
                                 <div class="col-md-6">
                                     <mat-form-field class="example-full-width">
-                                        <input matInput placeholder="Password" type="text" formControlName="password">
-                                    </mat-form-field>
-                                </div>
+                                        <input matInput placeholder="Username" [(ngModel)]="userDetails.username" formControlName="name">
 
-                           
+                                    </mat-form-field>
+                                    <div class="alert-danger"
+                                         *ngIf="formGroup.get('name').errors && (formGroup.get('name').dirty || formGroup.get('name').touched)">
+                                        <span *ngIf="formGroup.get('name').errors.required">Name is required</span>
+                                    </div>
+                                </div>
                                 <div class="col-md-6">
                                     <mat-form-field class="example-full-width">
-                                        <mat-select [(value)]="selected" formControlName="role">
-                                            <mat-option>None</mat-option>
-                                            <mat-option value="admin">Admin</mat-option>
-                                            <mat-option value="user">User</mat-option>
-                                        </mat-select>
+                                        <input matInput placeholder="Email address" [(ngModel)]="userDetails.email" type="email" formControlName="email">
+                                    </mat-form-field>
+                                    <div class="alert-danger"
+                                         *ngIf="formGroup.get('email').errors && (formGroup.get('email').dirty || formGroup.get('email').touched)">
+                                        <span *ngIf="formGroup.get('email').errors.required">Email is required</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" *ngIf="showPwd">
+                                <div class="col-md-6">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput placeholder="Password" [(ngModel)]="userDetails.password" type="password" formControlName="password">
                                     </mat-form-field>
                                 </div>
-
                             </div>
 
 
-                            <button mat-raised-button type="submit" class="btn btn-danger pull-right">Add User</button>
+                            <button mat-raised-button type="submit" class="btn btn-danger pull-right" *ngIf="showPwd">Add User</button>
+                            <button mat-raised-button type="submit" class="btn btn-danger pull-right" (click)="updateUser(userDetails)" *ngIf="!showPwd">Update User</button>
+
                             <div class="clearfix"></div>
                         </form>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card card-profile">
-                    <div class="card-avatar">
-                        <a href="javascript:void(0)">
-                            <img class="img" src="./assets/img/faces/marc.jpg" />
-                        </a>
-                    </div>
-                    <div class="card-body">
-                        <h6 class="card-category text-gray">CEO / Co-Founder</h6>
-                        <h4 class="card-title">Alec Thompson</h4>
-                        <p class="card-description">
-                            Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
-                        </p>
-                        <a href="javascript:void(0)" class="btn btn-danger btn-round">Follow</a>
-                    </div>
-                </div>
-            </div>
+            
         </div>
     </div>
 </div>

@@ -61,6 +61,9 @@ export const AdminLayoutRoutes: Routes = [
     //},
     { path: 'table-list', component: TableListComponent },
     { path: 'add-user', component: TableListAdd },
+    {
+        path: 'user-edit/:id', component: TableListAdd
+    },
     { path: 'typography',     component: TypographyComponent },
     { path: 'icons',          component: IconsComponent },
     { path: 'maps',           component: MapsComponent },

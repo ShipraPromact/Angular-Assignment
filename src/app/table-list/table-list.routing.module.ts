@@ -10,7 +10,6 @@ const routes: Routes =[
   }, {
     path: 'add-user',
         component: TableListAdd,
-    
   }
 ];
 @NgModule({

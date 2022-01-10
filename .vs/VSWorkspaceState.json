@@ -3,15 +3,14 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\components",
-    "\\src\\app\\components\\navbar",
-    "\\src\\app\\components\\sidebar",
     "\\src\\app\\layouts",
     "\\src\\app\\layouts\\admin-layout",
     "\\src\\app\\shared",
+    "\\src\\app\\table-list",
+    "\\src\\app\\table-list\\table-list-add",
     "\\src\\app\\user-profile",
     "\\src\\environments"
   ],
-  "SelectedNode": "\\src\\app\\components\\sidebar\\sidebar.component.ts",
+  "SelectedNode": "\\src\\app\\table-list\\table-list.component.html",
   "PreviewInSolutionExplorer": false
 }
