@@ -24,7 +24,7 @@ export class TableListComponent implements OnInit {
     }
     onEdit(userId) {
         console.log(userId);
-        this.router.navigate(['/user-edit/' + userId]);
+        this.router.navigate(['/user/edit/' + userId]);
     }
 
     onDelete(user) {

@@ -42,7 +42,7 @@ import { TableListAdd } from '../../table-list/table-list-add/table-list-add.com
     MapsComponent,
     NotificationsComponent,
       UpgradeComponent,
-      TableListAdd,
+//TableListAdd,
   ]
 })
 

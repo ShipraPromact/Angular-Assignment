@@ -3,14 +3,14 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\layouts",
-    "\\src\\app\\layouts\\admin-layout",
-    "\\src\\app\\shared",
+    "\\src\\app\\components",
+    "\\src\\app\\components\\sidebar",
     "\\src\\app\\table-list",
     "\\src\\app\\table-list\\table-list-add",
-    "\\src\\app\\user-profile",
+    "\\src\\assets",
+    "\\src\\assets\\css",
     "\\src\\environments"
   ],
-  "SelectedNode": "\\src\\app\\table-list\\table-list.component.html",
+  "SelectedNode": "\\src\\app\\table-list\\table-list-add\\table-list-add.component.html",
   "PreviewInSolutionExplorer": false
 }

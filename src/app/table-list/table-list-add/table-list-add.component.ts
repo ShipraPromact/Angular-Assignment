@@ -41,49 +41,35 @@ export class TableListAdd implements OnInit {
        
     }
     onSubmit(addValue) {
-
         console.log(addValue.value);
         const uservalue = {
-            username: addValue.value.name,
-            email: addValue.value.email,
-            password: addValue.value.password,
+            username: addValue.name,
+            email: addValue.email,
+            password: addValue.password,
         }
         console.log("user" + uservalue);
         this.service.addBanner(uservalue).subscribe(data => {
             console.log("data" + data);
+            this.route.navigate(['/user']);
         }, (err) => {
                 console.log("unable to add user", + err);
-        })
-        this.service.addBanner(addValue).subscribe(
-            res => {
-              //  this.loader = false;
-                //this.message = "banner added successfully";
-                this.userDetails = new userDetails();
-                console.log("res" + res);
-                this.route.navigate(['/table-list']);
-            },
-            err => { console.log(err); }
-        )
-        
+        })        
     }
     updateUser(updatedData) {
-        
         this.service.editUser(updatedData).subscribe(res => {
             this.userDetails = new userDetails();
-            this.route.navigate(['/table-list']);
+            this.route.navigate(['/user']);
         },
             err => {
                 console.log(err);
             }
         )
-        
-
     }
     createForm() {
         this.formGroup = this.formBuilder.group({
             'name': [null, Validators.required],
-            'email': [null, Validators.required],
-            'password': [null],
+            'email': [null, [Validators.required, Validators.email]],
+            'password': [null, Validators.required],
         });
     }
 
