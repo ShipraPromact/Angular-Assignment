@@ -1,0 +1,23 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title ">List of Posts</h4>
+                        <button class="btn btn-primary" routerLink="/user/add">Add new</button>
+                    </div>
+                    <div class="card-body">
+                        <mat-tab-group>
+                            <mat-tab *ngFor="let p of post, let i = index" label="Post">
+                                <p>{{p.description}}</p>
+
+                            </mat-tab>
+                        </mat-tab-group>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
